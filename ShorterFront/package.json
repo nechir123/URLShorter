@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@devexpress/dx-react-core": "^3.0.3",
+    "@devexpress/dx-react-grid": "^3.0.3",
+    "@devexpress/dx-react-grid-material-ui": "^3.0.3",
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
     "@mui/material": "^5.8.4",
@@ -14,6 +17,8 @@
     "@types/react": "^18.0.12",
     "@types/react-dom": "^18.0.5",
     "axios": "^0.27.2",
+    "devextreme": "21.2.8",
+    "devextreme-react": "21.2.8",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-router-dom": "^6.3.0",

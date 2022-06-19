@@ -10,13 +10,18 @@ using URLShorter.Models;
 
 namespace URLShorter
 {
+    /// <summary>A startup.</summary>
     public class Startup
     {
+        /// <summary>Constructor.</summary>
+        /// <param name="configuration">The configuration. </param>
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
+        /// <summary>Gets the configuration.</summary>
+        /// <value>The configuration.</value>
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -25,16 +30,13 @@ namespace URLShorter
 
             services.AddControllersWithViews();
 
-
-            var qq = Configuration.GetConnectionString("SQLConnectionString");
-
             services.AddDbContext<URLContext>(
                 options => options.UseSqlServer(Configuration.GetConnectionString("SQLConnectionString")));
 
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
-                configuration.RootPath = "ClientApp/build";
+                configuration.RootPath = "ShorterFront/build";
             });
         }
         private static void EnsureDatabaseCreation(IApplicationBuilder app)
